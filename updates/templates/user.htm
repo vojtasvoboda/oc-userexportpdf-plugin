@@ -1,0 +1,80 @@
+<div class="section" id="profile">
+    <div class="left-col">
+        <h1>{{ user.name }} {{ user.surname }}</h1>
+        <p>{{ user.email }}</p>
+        <p>Username: {{ user.username }}</p>
+        {% if user.group %}<p>Group:{{ user.groups.first().name }}</p>{% endif %}
+    </div>
+    <div class="right-col">
+        {% set config = {mode: 'crop', extension: 'auto'} %}
+        <img src="{{ user.avatar.getThumb(260, 260, config) | slice(1) }}" alt="" />
+    </div>
+    <div class="clear"></div>
+</div>
+<div id="info">
+    <div class="left-col">
+        <table>
+            <tr>
+                <th>Joined:</th>
+                <td>{{ user.created_at | date('d.m.Y H:i:s') }}</td>
+            </tr>
+            {% if user.company %}
+            <tr>
+                <th>Company:</th>
+                <td>{{ user.company }}</td>
+            </tr>
+            {% endif %}
+            {% if user.street_addr %}
+            <tr>
+                <th>Street:</th>
+                <td>{{ user.street_addr }}</td>
+            </tr>
+            {% endif %}
+            {% if user.city %}
+            <tr>
+                <th>City:</th>
+                <td>{{ user.city }}</td>
+            </tr>
+            {% endif %}
+            {% if user.zip %}
+            <tr>
+                <th>ZIP:</th>
+                <td>{{ user.zip }}</td>
+            </tr>
+            {% endif %}
+        </table>
+    </div>
+    <div class="right-col">
+        <table>
+            <tr>
+                <th>Last seen:</th>
+                <td>{{ user.last_login | date('d.m.Y H:i:s') }}</td>
+            </tr>
+            {% if user.phone %}
+            <tr>
+                <th>Phone:</th>
+                <td>{{ user.phone }}</td>
+            </tr>
+            {% endif %}
+            {% if user.mobile %}
+            <tr>
+                <th>Mobile:</th>
+                <td>{{ user.mobile }}</td>
+            </tr>
+            {% endif %}
+            {% if user.state %}
+            <tr>
+                <th>State:</th>
+                <td>{{ user.state.name }}</td>
+            </tr>
+            {% endif %}
+            {% if user.country %}
+            <tr>
+                <th>Country:</th>
+                <td>{{ user.country.name }}</td>
+            </tr>
+            {% endif %}
+        </table>
+    </div>
+    <div class="clear"></div>
+</div>

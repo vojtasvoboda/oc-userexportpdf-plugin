@@ -1,0 +1,69 @@
+@font-face {
+    font-family: 'Open Sans';
+    src: url('plugins/renatio/dynamicpdf/assets/fonts/OpenSans-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    font-weight: bold;
+    src: url('plugins/renatio/dynamicpdf/assets/fonts/OpenSans-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    font-style: italic;
+    src: url('plugins/renatio/dynamicpdf/assets/fonts/OpenSans-Italic.ttf');
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    font-style: italic;
+    font-weight: bold;
+    src: url('plugins/renatio/dynamicpdf/assets/fonts/OpenSans-BoldItalic.ttf');
+}
+
+@page { margin: 0; padding: 0; }
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    margin: 6% 10% 10%;
+    text-align: left;
+}
+
+.clear { float: none; clear: both; }
+.left-col { width: 49%; display: inline-block; }
+.right-col { width: 49%; display: inline-block; }
+.section { margin-bottom: 25px; }
+
+div, table, strong, tr, td { margin: 0; padding: 0; border: 0; }
+table { margin-left: -2px; }
+table#values { width: 100%; }
+th { text-align: left; padding-right: 10px; }
+table#values th { padding-right: 20px; }
+table#values td { padding-right: 20px; }
+
+#header .logo img {
+    float: left;
+    margin-right: 30px;
+    margin-bottom: 30px;
+}
+
+#profile .left-col h1 {
+    margin: 0 0 15px;
+}
+
+#profile .left-col p {
+    font-size: 130%;
+    padding: 0;
+    margin: 0;
+    line-height: 1.3;
+}
+
+#profile .right-col {
+    text-align: right;
+}
+
+#profile .right-col img {
+    margin-bottom: 20px;
+}

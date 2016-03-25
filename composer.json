@@ -1,0 +1,17 @@
+{
+    "name": "vojtasvoboda/oc-userexportpdf-plugin",
+    "type": "october-plugin",
+    "description": "User export to PDF plugin for OctoberCMS",
+    "homepage": "https://github.com/vojtasvoboda/oc-userexportpdf-plugin",
+    "keywords": ["october", "plugin", "user", "export", "pdf"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Vojta Svoboda",
+            "email": "vojtasvoboda.cz@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.5.9"
+    }
+}
