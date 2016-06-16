@@ -1,8 +1,8 @@
 <?php namespace VojtaSvoboda\UserExportPdf\Updates;
 
 use File;
-use Renatio\DynamicPDF\Models\PDFLayout;
-use Renatio\DynamicPDF\Models\PDFTemplate;
+use Renatio\DynamicPDF\Models\Layout;
+use Renatio\DynamicPDF\Models\Template;
 use Schema;
 use Seeder;
 
@@ -14,9 +14,9 @@ class SeedPdfTemplatesTable extends Seeder
             return false;
         }
 
-        $layout = PDFLayout::where('code', 'rainlab::user')->first();
+        $layout = Layout::where('code', 'rainlab::user')->first();
 
-        PDFTemplate::create([
+        Template::create([
             'title' => 'User profil',
             'description' => "User's PDF card template",
             'layout' => $layout,

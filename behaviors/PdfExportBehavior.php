@@ -5,7 +5,7 @@ use Config;
 use Exception;
 use October\Rain\Exception\ApplicationException;
 use RainLab\User\Models\User;
-use Renatio\DynamicPDF\Models\PDFTemplate;
+use Renatio\DynamicPDF\Classes\PDF;
 use Response;
 use Str;
 
@@ -20,14 +20,10 @@ class PdfExportBehavior extends ControllerBehavior
 
         $templateCode = Config::get('vojtasvoboda.userexportpdf::config.template', 'rainlab::user');
         $data = ['user' => $user];
-        $params = [
-            'filename' => Str::slug($user->name . '-' . $user->username) . ".pdf",
-            'content_disposition' => 'attachment',
-        ];
+        $filename = Str::slug($user->name . '-' . $user->username) . ".pdf";
 
         try {
-            // waiting for Renatio.DynamicPDF merge pull request
-            return PDFTemplate::render($templateCode, $data, $params);
+            return PDF::loadTemplate($templateCode, $data)->download($filename);
 
         } catch (Exception $e) {
             throw new ApplicationException($e->getMessage());

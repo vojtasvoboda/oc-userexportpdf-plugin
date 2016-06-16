@@ -4,3 +4,4 @@
     - seed_pdf_layouts_table.php
     - seed_pdf_templates_table.php
 1.0.3: Fix template variable
+1.0.4: Update compatibility with Renatio.DynamiPDF version 2

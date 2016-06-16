@@ -1,7 +1,7 @@
 <?php namespace VojtaSvoboda\UserPdfExport\Updates;
 
 use File;
-use Renatio\DynamicPDF\Models\PDFLayout;
+use Renatio\DynamicPDF\Models\Layout;
 use Schema;
 use Seeder;
 
@@ -13,7 +13,7 @@ class SeedPdfLayoutsTable extends Seeder
             return false;
         }
 
-        PDFLayout::create([
+        Layout::create([
             'name' => 'Users PDF layout',
             'code' => 'rainlab::user',
             'content_html' => File::get(__DIR__ . '/templates/layout.htm'),
