@@ -30,10 +30,10 @@ Just copy `/plugins/vojtasvoboda/userexportpdf/config/config.php` file to `/conf
 
 - [ ] skip seeding layout/template when already exists with same code
 
-## License
-
-User export PDF plugin is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT) same as OctoberCMS platform.
-
 ## Contributing
 
 Please send Pull Request to master branch.
+
+## License
+
+User export PDF plugin is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT) same as OctoberCMS platform.
