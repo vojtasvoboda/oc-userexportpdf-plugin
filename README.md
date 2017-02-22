@@ -8,7 +8,7 @@ Create nice user's profile PDF with one click! Plugin is delivered with prepared
 
 Compatible with all plugins extending RainLab.User such as RainLab.Location, RainLab.UserPlus - just update PDF template and add new fields!
 
-Tested with the latest stable OctoberCMS build 349.
+Tested with the OctoberCMS build 349.
 
 ## Dependencies
 
