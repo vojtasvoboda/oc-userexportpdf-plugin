@@ -17,16 +17,18 @@ class Plugin extends PluginBase
     public function pluginDetails()
     {
         return [
-            'name' => 'vojtasvoboda.userexportpdf::lang.plugin.name',
+            'name'        => 'vojtasvoboda.userexportpdf::lang.plugin.name',
             'description' => 'vojtasvoboda.userexportpdf::lang.plugin.description',
-            'author' => 'Vojta Svoboda',
-            'icon' => 'icon-file-pdf-o',
+            'author'      => 'Vojta Svoboda',
+            'icon'        => 'icon-file-pdf-o',
+            'homepage'    => 'https://github.com/vojtasvoboda/oc-userexportpdf-plugin',
         ];
     }
 
     public function boot()
     {
-        UserController::extend(function($controller) {
+        UserController::extend(function($controller)
+        {
             $controller->implement[] = 'VojtaSvoboda.UserExportPdf.Behaviors.PdfExportBehavior';
         });
 
@@ -46,8 +48,8 @@ class Plugin extends PluginBase
             // Add an extra birthday column
             $widget->addColumns([
                 'export' => [
-                    'label' => 'vojtasvoboda.userexportpdf::lang.list.export.column',
-                    'sortable' => false,
+                    'label'     => 'vojtasvoboda.userexportpdf::lang.list.export.column',
+                    'sortable'  => false,
                     'clickable' => false,
                 ],
             ]);
@@ -77,7 +79,7 @@ class Plugin extends PluginBase
     {
         return [
             'vojtasvoboda.userexportpdf.export' => [
-                'tab' => 'vojtasvoboda.userexportpdf::lang.permission.tab',
+                'tab'   => 'vojtasvoboda.userexportpdf::lang.permission.tab',
                 'label' => 'vojtasvoboda.userexportpdf::lang.permission.export',
             ],
         ];
