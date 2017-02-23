@@ -1,6 +1,6 @@
 # User export to PDF plugin for OctoberCMS
 
-[![Codacy](https://img.shields.io/codacy/e27821fb6289410b8f58338c7e0bc686.svg)](https://www.codacy.com/app/vojtasvoboda/oc-userexportpdf-plugin/dashboard)
+[![Codacy](https://img.shields.io/codacy/17ce271f07de4c6ea61fb5c323f46bda.svg)](https://www.codacy.com/app/vojtasvoboda/oc-userexportpdf-plugin/dashboard)
 [![Scrutinizer Coverage](https://img.shields.io/scrutinizer/g/vojtasvoboda/oc-userexportpdf-plugin.svg)](https://scrutinizer-ci.com/g/vojtasvoboda/oc-userexportpdf-plugin/?branch=master)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/vojtasvoboda/oc-userexportpdf-plugin/blob/master/LICENSE.md)
 
