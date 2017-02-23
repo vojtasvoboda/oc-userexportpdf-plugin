@@ -1,6 +1,5 @@
 <?php namespace VojtaSvoboda\UserExportPdf;
 
-use Backend;
 use Event;
 use Lang;
 use RainLab\User\Controllers\Users as UserController;
@@ -29,7 +28,7 @@ class Plugin extends PluginBase
     {
         UserController::extend(function($controller)
         {
-            $controller->implement[] = 'VojtaSvoboda.UserExportPdf.Behaviors.PdfExportBehavior';
+            $controller->implement[ ] = 'VojtaSvoboda.UserExportPdf.Behaviors.PdfExportBehavior';
         });
 
         // extend user listing

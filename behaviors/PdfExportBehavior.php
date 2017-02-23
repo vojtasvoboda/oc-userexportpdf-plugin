@@ -19,7 +19,9 @@ class PdfExportBehavior extends ControllerBehavior
         }
 
         $templateCode = Config::get('vojtasvoboda.userexportpdf::config.template', 'rainlab::user');
-        $data = ['user' => $user];
+        $data = [
+            'user' => $user,
+        ];
         $filename = Str::slug($user->name . '-' . $user->username) . ".pdf";
 
         try {
