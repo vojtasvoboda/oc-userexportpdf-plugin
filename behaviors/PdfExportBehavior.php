@@ -1,11 +1,11 @@
 <?php namespace VojtaSvoboda\UserExportPdf\Behaviors;
 
+use App;
 use Backend\Classes\ControllerBehavior;
 use Config;
 use Exception;
 use October\Rain\Exception\ApplicationException;
 use RainLab\User\Models\User;
-use Renatio\DynamicPDF\Classes\PDF;
 use Response;
 use Str;
 
@@ -25,7 +25,13 @@ class PdfExportBehavior extends ControllerBehavior
         $filename = Str::slug($user->name . '-' . $user->username) . ".pdf";
 
         try {
-            return PDF::loadTemplate($templateCode, $data)->download($filename);
+            /** @var PDFWrapper $pdf */
+            $pdf = App::make('dynamicpdf');
+
+            return $pdf
+                ->setOptions(['logOutputFile' => storage_path('temp/log.htm')])
+                ->loadTemplate($templateCode, $data)
+                ->download($filename);
 
         } catch (Exception $e) {
             throw new ApplicationException($e->getMessage());
