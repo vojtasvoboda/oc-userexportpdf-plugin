@@ -8,7 +8,7 @@ Create nice user's profile PDF with one click! Plugin is delivered with prepared
 
 Compatible with all plugins extending RainLab.User such as RainLab.Location, RainLab.UserPlus - just update PDF template and add new fields!
 
-Tested with the OctoberCMS build 349.
+Tested with the latest stable OctoberCMS build 419 (with Laravel 5.5).
 
 ## Dependencies
 
@@ -18,7 +18,7 @@ Tested with the OctoberCMS build 349.
 ## Installation
 
 1. Install plugin VojtaSvoboda.UserExportPdf from your Backend -> Settings -> System -> Updates -> Install plugins.
-2. Update PDF template at Backend -> Settings -> PDF -> PDF Templates.
+2. Update PDF templates at PDF section available from main menu.
 
 ## Change PDF template
 
@@ -26,9 +26,9 @@ Just copy `/plugins/vojtasvoboda/userexportpdf/config/config.php` file to `/conf
 
 ## Future plans
 
-**Feel free to send pullrequest!**
-
 - [ ] skip seeding layout/template when already exists with same code
+
+**Feel free to send pullrequest!**
 
 ## Contributing
 

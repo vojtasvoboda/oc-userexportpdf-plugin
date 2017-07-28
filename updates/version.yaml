@@ -7,3 +7,4 @@
 1.0.4: Update compatibility with Renatio.DynamiPDF version 2
 1.0.5: Add Hungarian translation (thanks to Szabó Gergő)
 1.0.6: Fix because of open_basedir restriction on some hostings
+1.0.7: Fix export button style.

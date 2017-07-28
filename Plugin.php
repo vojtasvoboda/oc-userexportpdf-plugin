@@ -26,14 +26,12 @@ class Plugin extends PluginBase
 
     public function boot()
     {
-        UserController::extend(function($controller)
-        {
+        UserController::extend(function($controller) {
             $controller->implement[ ] = 'VojtaSvoboda.UserExportPdf.Behaviors.PdfExportBehavior';
         });
 
         // extend user listing
-        Event::listen('backend.list.extendColumns', function($widget)
-        {
+        Event::listen('backend.list.extendColumns', function($widget) {
             // Only for the User controller
             if (!$widget->getController() instanceof UserController) {
                 return;
@@ -55,16 +53,14 @@ class Plugin extends PluginBase
         });
 
         // extend export column value to add export button
-        Event::listen('backend.list.overrideColumnValue', function($widget, $model, $column, $value)
-        {
+        Event::listen('backend.list.overrideColumnValue', function($widget, $model, $column, $value) {
             // Only for the User model
             if (!$model instanceof UserModel) {
                 return;
             }
 
-            if ($column->columnName == 'export')
-            {
-                $button = '<a';
+            if ($column->columnName == 'export') {
+                $button = '<a role="button" style="color:white"';
                 $button .= ' href="' . url('/backend/rainlab/user/users/pdf/' . $model->id) . '"';
                 $button .= ' class="btn btn-xs btn-warning"';
                 $button .= '>' . Lang::get('vojtasvoboda.userexportpdf::lang.list.export.button') . '</a>';
