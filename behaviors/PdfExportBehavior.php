@@ -26,9 +26,14 @@ class PdfExportBehavior extends ControllerBehavior
             /** @var PDFWrapper $pdf */
             $pdf = App::make('dynamicpdf');
 
+            $options = [
+                'logOutputFile' => storage_path('temp/log.htm'),
+                'isRemoteEnabled' => true,
+            ];
+
             return $pdf
-                ->setOptions(['logOutputFile' => storage_path('temp/log.htm')])
                 ->loadTemplate($templateCode, compact('user'))
+                ->setOptions($options)
                 ->download($filename);
 
         } catch (Exception $e) {
