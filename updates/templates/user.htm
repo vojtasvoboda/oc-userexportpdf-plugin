@@ -7,7 +7,7 @@
     </div>
     <div class="right-col">
         {% set config = {mode: 'crop', extension: 'auto'} %}
-        <img src="{{ user.avatar.getThumb(260, 260, config) }}" alt="" />
+        <img src="{{ user.avatar.getLocalPath() }}" style="max-width: 260px; max-height: 260px;" alt="" />
     </div>
     <div class="clear"></div>
 </div>

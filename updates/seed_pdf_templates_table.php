@@ -17,7 +17,7 @@ class SeedPdfTemplatesTable extends Seeder
         $layout = Layout::where('code', 'rainlab::user')->first();
 
         Template::create([
-            'title' => 'User profil',
+            'title' => 'User profile',
             'description' => "User's PDF card template",
             'layout' => $layout,
             'code' => 'rainlab::user',

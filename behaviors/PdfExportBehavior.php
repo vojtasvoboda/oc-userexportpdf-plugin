@@ -1,6 +1,5 @@
 <?php namespace VojtaSvoboda\UserExportPdf\Behaviors;
 
-use App;
 use Backend\Classes\ControllerBehavior;
 use Config;
 use Exception;
@@ -24,11 +23,10 @@ class PdfExportBehavior extends ControllerBehavior
 
         try {
             /** @var PDFWrapper $pdf */
-            $pdf = App::make('dynamicpdf');
+            $pdf = app('dynamicpdf');
 
             $options = [
                 'logOutputFile' => storage_path('temp/log.htm'),
-                'isRemoteEnabled' => true,
             ];
 
             return $pdf

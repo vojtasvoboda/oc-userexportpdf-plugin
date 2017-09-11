@@ -8,3 +8,4 @@
 1.0.5: Add Hungarian translation (thanks to Szabó Gergő)
 1.0.6: Fix because of open_basedir restriction on some hostings
 1.0.7: Fix export button style.
+1.0.8: Fixes for Laravel 5.5
