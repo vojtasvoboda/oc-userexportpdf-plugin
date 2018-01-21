@@ -28,6 +28,7 @@ Just copy `/plugins/vojtasvoboda/userexportpdf/config/config.php` file to `/conf
 
 - [ ] skip seeding layout/template when already exists with same code
 - [ ] generate PDF also with Gravatars, not only local avatar images
+- [ ] fix Codacy grade from B to A
 
 **Feel free to send pullrequest!**
 
